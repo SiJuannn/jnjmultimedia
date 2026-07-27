@@ -171,14 +171,14 @@ function renderGallery(filterCategory = 'All') {
             const imageCrop = item.crop || 'center'; 
 
             const htmlString = `
-                <div class="gallery-item" onclick="openAlbum(${index})">
-                    <img src="${item.coverImage}" style="object-position: ${imageCrop};" alt="${item.title}" onerror="this.src='https://via.placeholder.com/400x300/161616/C8A96A?text=Album+Cover'">
-                    <div class="gallery-overlay">
-                        <h3>${item.title}</h3>
-                        <p>${item.category} (${item.images.length} Photos)</p>
-                    </div>
-                </div>
-            `;
+    <div class="gallery-item" onclick="openAlbum(${index})">
+        <img src="${item.coverImage}" style="object-position: ${imageCrop};" alt="${item.title}" onerror="this.src='gallery/placeholder.png'">
+        <div class="gallery-overlay">
+            <h3>${item.title}</h3>
+            <p>${item.category} (${item.images.length} Photos)</p>
+        </div>
+    </div>
+`;
             galleryContainer.innerHTML += htmlString;
         }
     });
@@ -304,29 +304,3 @@ closeLightbox.addEventListener('click', () => {
     lightbox.style.display = 'none';
 });
 
-// --- 6. Video Modal Logic ---
-const videoModal = document.getElementById('video-modal');
-const modalVideoPlayer = document.getElementById('modal-video-player');
-const closeVideo = document.getElementById('close-video');
-
-function openVideoModal(videoSrc) {
-    videoModal.style.display = 'flex';
-    // This gives the iframe the Facebook link, which loads the video
-    modalVideoPlayer.src = videoSrc; 
-}
-
-closeVideo.addEventListener('click', () => {
-    videoModal.style.display = 'none';
-    // This clears the link, which stops the video from playing in the background
-    modalVideoPlayer.src = ""; 
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-    if (e.target === videoModal) {
-        videoModal.style.display = 'none';
-        modalVideoPlayer.src = ""; // Clear the link here too
-    }
-});
