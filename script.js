@@ -201,7 +201,7 @@ const videoContainer = document.getElementById('video-container');
 videos.forEach(vid => {
     const htmlString = `
         <a href="${vid.video}" target="_blank" class="card video-card" style="text-decoration: none; color: inherit;">
-            <img src="${vid.thumbnail}" alt="${vid.title}" onerror="this.src='https://via.placeholder.com/400x250/161616/C8A96A?text=Watch+Video'">
+            <img src="${vid.thumbnail}" alt="${vid.title}" onerror="this.src='gallery/placeholder.png'">
             <h3>${vid.title}</h3>
             <p>▶ Watch Now</p>
         </a>
@@ -216,7 +216,7 @@ members.forEach(member => {
 
     const htmlString = `
         <div class="card team-card">
-            <img src="${member.image}" style="object-position: ${imageCrop};" alt="${member.name}" onerror="this.src='https://via.placeholder.com/300x300/161616/C8A96A?text=Team+Member'">
+            <img src="${member.image}" style="object-position: ${imageCrop};" alt="${member.name}" onerror="this.src='gallery/placeholder.png'">
             <h3>${member.name}</h3>
             <p>${member.role}</p>
         </div>
@@ -266,7 +266,7 @@ function updateLightboxContent() {
     lightboxImg.src = currentAlbum[currentIndex];
     
     lightboxImg.onerror = function() {
-        this.src = 'https://via.placeholder.com/800x600/161616/C8A96A?text=Photo+Not+Found';
+        this.src = 'gallery/placeholder.png';
     };
 
     lightboxCaption.innerText = currentAlbumTitle;
