@@ -422,67 +422,78 @@ nav.scrolled {
     opacity: 0.3;
 }
 
+
 /* ==========================================
-   CONTACT FORM
+   CONTACT SECTION (Updated Layout)
    ========================================== */
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+.contact-details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    padding: 50px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 169, 106, 0.2); /* Very subtle gold border */
 }
 
-.contact-info, .contact-form {
-    flex: 1; /* Both take up equal space */
-    min-width: 300px; /* Forces wrap on small screens */
-}
-
-.contact-info h3 {
-    color: var(--accent-primary);
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
+.contact-intro {
     color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
+.contact-info {
+    margin-bottom: 40px;
 }
 
-.social-links a {
+.contact-item {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* Make the labels (Email, Phone, etc.) stand out in gold */
+.contact-item strong {
     color: var(--accent-primary);
-    border: 1px solid var(--accent-primary);
-    padding: 8px 15px;
-    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.social-links a:hover {
-    background: var(--accent-primary);
+/* Style the Facebook and Instagram links */
+.contact-item.socials a {
+    color: var(--text-secondary);
+    margin: 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.contact-item.socials a:hover {
+    color: var(--accent-primary);
+}
+
+/* Book Now Button Wrapper */
+.contact-button-wrapper {
+    margin-top: 20px;
+}
+
+/* Style for the big Book Now button */
+.book-now-btn {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: var(--accent-primary);
     color: var(--bg-main);
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    background: var(--bg-main);
-    border: 1px solid #333;
-    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     border-radius: 5px;
-    font-family: inherit;
+    transition: 0.3s ease;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-primary);
-}
-
-.form-btn {
-    width: 100%;
-    padding: 15px;
+.book-now-btn:hover {
+    background-color: var(--accent-secondary);
+    transform: translateY(-3px); /* Small lift effect on hover */
 }
 
 /* ==========================================
