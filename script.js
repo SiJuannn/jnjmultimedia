@@ -99,9 +99,7 @@ const members = [
 
 // Reviews Data
 const testimonials = [
-    { name: "Sarah & Mark", message: "J&J Multimedia captured our wedding perfectly. The cinematic video made us cry!" },
-    { name: "Andronica", message: "Ayyy perfect!" },
-    { name: "David R.", message: "They made my daughter's 18th birthday look like a movie. Highly recommended." }
+    { name: "Andronica", message: "Ayyy perfect!" }
 ];
 
 // ------------------------------------------------------
