@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
     --bg-main: #0B0B0B;       
@@ -167,7 +168,7 @@ nav.scrolled {
 }
 
 .hero-content h1 {
-    font-family: 'Roboto', serif;
+    font-family: 'Oswald', serif;
     font-size: 4rem;
     color: var(--accent-primary);
     letter-spacing: 5px;
