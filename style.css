@@ -1,20 +1,15 @@
-/* ==========================================
-   CSS VARIABLES (Easy color editing)
-   ========================================== */
+
 :root {
-    --bg-main: #0B0B0B;        /* Main dark background */
-    --bg-secondary: #161616;   /* Slightly lighter background for contrast */
-    --accent-primary: #C8A96A; /* Gold */
-    --accent-secondary: #E8C98A; /* Lighter Gold */
-    --text-primary: #FFFFFF;   /* White text */
-    --text-secondary: #B5B5B5; /* Grayish text */
+    --bg-main: #0B0B0B;       
+    --bg-secondary: #161616;  
+    --accent-primary: #C8A96A; 
+    --accent-secondary: #E8C98A; 
+    --text-primary: #FFFFFF;   
+    --text-secondary: #B5B5B5;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ==========================================
-   GLOBAL RESET
-   ========================================== */
-/* We reset margins and padding so browsers don't add their own default spacing */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +17,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling when clicking nav links */
+    scroll-behavior: smooth; 
     font-family: var(--font-main);
     color: var(--text-primary);
     background-color: var(--bg-main);
@@ -38,12 +33,16 @@ a {
     transition: 0.3s ease;
 }
 
-/* Common Container for centering content */
+
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+
 
 .text-center {
     text-align: center;
@@ -53,7 +52,7 @@ a {
     background-color: var(--bg-secondary);
 }
 
-/* Section styling */
+
 .section {
     padding: 100px 0;
 }
@@ -67,15 +66,13 @@ a {
     letter-spacing: 2px;
 }
 
-/* ==========================================
-   NAVIGATION BAR
-   ========================================== */
+
 nav {
-    position: fixed; /* Stays at top when scrolling */
+    position: fixed; 
     top: 0;
     width: 100%;
     padding: 20px 0;
-    z-index: 100; /* Keeps it above other elements */
+    z-index: 100; 
     transition: background-color 0.4s ease, padding 0.4s ease;
 }
 
@@ -97,7 +94,6 @@ nav.scrolled {
 
 #logo-img {
     height: 50px;
-    /* If no logo is present yet, this styles the broken image text */
     color: var(--accent-primary); 
     border: 2px var(--accent-primary);
     border-radius: 50%;
@@ -122,15 +118,15 @@ nav.scrolled {
 }
 
 .hero-logo{
-  max-width: 175px; /* Adjust this size to fit your logo perfectly */
-  margin-bottom: 20px; /* Adds space between the logo and your business name */
+  max-width: 175px; 
+  margin-bottom: 20px; 
   display: block;
   border-radius: 50%;
   margin-left: auto;
-  margin-right: auto; /* This centers the logo */
+  margin-right: auto; 
 }
 
-/* Book Now Button in Nav */
+
 .btn-book-now {
     background-color: var(--accent-primary);
     color: var(--bg-main) !important;
@@ -141,10 +137,9 @@ nav.scrolled {
 
 .btn-book-now:hover {
     background-color: var(--accent-secondary);
-    box-shadow: 0 0 15px var(--accent-primary); /* Soft glow animation */
+    box-shadow: 0 0 15px var(--accent-primary); 
 }
 
-/* Hamburger menu (hidden on desktop) */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -159,11 +154,9 @@ nav.scrolled {
     transition: 0.3s;
 }
 
-/* ==========================================
-   HERO SECTION
-   ========================================== */
+
 .hero {
-    height: 100vh; /* 100% of the viewport height */
+    height: 100vh; 
     background: url('assets/hero.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
@@ -172,7 +165,7 @@ nav.scrolled {
     text-align: center;
 }
 
-/* Dark overlay so text is readable */
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -184,7 +177,7 @@ nav.scrolled {
 
 .hero-content {
     position: relative;
-    z-index: 10; /* Put text above overlay */
+    z-index: 10; 
     animation: fadeIn 2s ease;
 }
 
@@ -212,7 +205,7 @@ nav.scrolled {
     margin-bottom: 40px;
 }
 
-/* Buttons */
+
 .hero-buttons {
     display: flex;
     gap: 20px;
@@ -248,7 +241,7 @@ nav.scrolled {
     color: var(--bg-main);
 }
 
-/* Animated Scroll Indicator */
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -280,12 +273,9 @@ nav.scrolled {
     100% { transform: translateY(15px); opacity: 0; }
 }
 
-/* ==========================================
-   GRID LAYOUTS (For Cards, Gallery, Team)
-   ========================================== */
+
 .grid-container {
     display: grid;
-    /* This automatically creates columns that fit the screen size. Very beginner-friendly! */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
@@ -320,9 +310,7 @@ nav.scrolled {
     color: var(--text-secondary);
 }
 
-/* ==========================================
-   GALLERY SECTION
-   ========================================== */
+
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -357,7 +345,7 @@ nav.scrolled {
 .gallery-item img {
     width: 100%;
     height: 300px;
-    object-fit: cover; /* Ensures images are cropped beautifully without stretching */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
@@ -367,7 +355,7 @@ nav.scrolled {
 
 .gallery-overlay {
     position: absolute;
-    inset: 0; /* Shorthand for top, right, bottom, left = 0 */
+    inset: 0; 
     background: rgba(11, 11, 11, 0.8);
     display: flex;
     flex-direction: column;
@@ -385,9 +373,7 @@ nav.scrolled {
     color: var(--accent-primary);
 }
 
-/* ==========================================
-   VIDEO & TEAM & TESTIMONIAL CARDS
-   ========================================== */
+
 .video-card img, .team-card img {
     width: 100%;
     height: 250px;
@@ -423,9 +409,7 @@ nav.scrolled {
 }
 
 
-/* ==========================================
-   CONTACT SECTION (Updated Layout)
-   ========================================== */
+
 .contact-details-container {
     max-width: 600px;
     margin: 0 auto;
@@ -433,7 +417,7 @@ nav.scrolled {
     background-color: var(--bg-secondary);
     padding: 50px 30px;
     border-radius: 10px;
-    border: 1px solid rgba(200, 169, 106, 0.2); /* Very subtle gold border */
+    border: 1px solid rgba(200, 169, 106, 0.2); 
 }
 
 .contact-intro {
@@ -452,7 +436,7 @@ nav.scrolled {
     color: var(--text-primary);
 }
 
-/* Make the labels (Email, Phone, etc.) stand out in gold */
+
 .contact-item strong {
     color: var(--accent-primary);
     margin-right: 10px;
@@ -460,7 +444,7 @@ nav.scrolled {
     letter-spacing: 1px;
 }
 
-/* Style the Facebook and Instagram links */
+
 .contact-item.socials a {
     color: var(--text-secondary);
     margin: 0 10px;
@@ -473,12 +457,11 @@ nav.scrolled {
     color: var(--accent-primary);
 }
 
-/* Book Now Button Wrapper */
 .contact-button-wrapper {
     margin-top: 20px;
 }
 
-/* Style for the big Book Now button */
+
 .book-now-btn {
     display: inline-block;
     padding: 15px 50px;
@@ -493,12 +476,10 @@ nav.scrolled {
 
 .book-now-btn:hover {
     background-color: var(--accent-secondary);
-    transform: translateY(-3px); /* Small lift effect on hover */
+    transform: translateY(-3px); 
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
+
 footer {
     background-color: #050505;
     padding: 50px 0 20px;
@@ -533,11 +514,9 @@ footer {
     padding-top: 20px;
 }
 
-/* ==========================================
-   MODALS (Lightbox & Video Player)
-   ========================================== */
+
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -591,18 +570,18 @@ video {
 .lightbox-nav {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Centers vertically */
+    top: 50%; 
     transform: translateY(-50%);
     color: white;
     font-weight: bold;
     font-size: 50px;
     padding: 20px;
     transition: 0.3s ease;
-    user-select: none; /* Prevents highlighting the arrow as text */
+    user-select: none; 
 }
 
 .lightbox-nav:hover {
-    color: var(--accent-primary); /* Turns gold on hover */
+    color: var(--accent-primary); 
 }
 
 .prev-btn {
@@ -621,29 +600,27 @@ video {
 }
 
 
-/* ==========================================
-   RESPONSIVE DESIGN (Mobile adjustments)
-   ========================================== */
+
 @media (max-width: 768px) {
     .nav-links {
         display: flex;
-        flex-direction: column;
-        position: absolute;
+        flex-direction: row;
+        position: static;
         top: 70px;
-        left: -100%; /* Hidden off-screen to the left */
+        left: -100%; 
         width: 100%;
-        background-color: rgba(11,11,11,0.98);
-        padding: 30px 0;
+        background-color: transparent;
+        padding: 0;
         transition: 0.4s ease;
     }
 
-    /* When JS adds the .active class, it slides in */
+  
     .nav-links.active {
         left: 0;
     }
 
     .hamburger {
-        display: flex;
+        display: none;
     }
 
     .hero-content h1 {
@@ -657,5 +634,15 @@ video {
     .footer-content {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    .hero-content h1 {
+        font-size: 5rem; 
     }
 }

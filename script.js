@@ -1,14 +1,10 @@
-/* =========================================================
-   DATA ARRAYS (EDIT THESE TO UPDATE YOUR WEBSITE)
-   ========================================================= */
-
-// 1. GALLERY DATA (Now updated so EVERY item is an album)
+// Data Arrays
 const gallery = [
     { 
         title: "Classic Wedding", 
         category: "Wedding", 
-        coverImage: "gallery/wedding-cover.jpg", // The image shown on the grid
-        images: [ // The array of images shown inside the lightbox
+        coverImage: "gallery/wedding-cover.jpg", 
+        images: [ 
             "gallery/wedding1.jpg", 
             "gallery/wedding2.jpg", 
             "gallery/wedding3.jpg"
@@ -17,8 +13,8 @@ const gallery = [
     { 
         title: "Pre-Wedding Shoot", 
         category: "Wedding", 
-        coverImage: "gallery/prewedding-cover.jpg", // The image shown on the grid
-        images: [ // The array of images shown inside the lightbox
+        coverImage: "gallery/prewedding-cover.jpg", 
+        images: [ 
             "gallery/prewedding1.jpg", 
             "gallery/prewedding2.jpg", 
             "gallery/prewedding3.jpg"
@@ -33,13 +29,12 @@ const gallery = [
             "gallery/debut2.jpg"
         ]
     },
-    // I updated your remaining items to follow the album format too! 
-    // Just add more images to their arrays when you have them.
+// ---------------------------
     { 
         title: "Barangay Fiesta", 
         category: "Festival", 
         coverImage: "gallery/fiesta-cover.jpg",
-        crop: "center", // Custom crop for this album's cover image 
+        crop: "center", 
         images: ["gallery/fiesta1.jpg",
             "gallery/fiesta2.jpg",
             "gallery/fiesta3.jpg"
@@ -65,31 +60,31 @@ const gallery = [
     }
 ];
 
-// 2. VIDEOS DATA
+// Video Data
 const videos = [
     { 
         title: "Wedding SDE", 
         thumbnail: "videos/thumb1.jpg", 
-        // PASTE THE FACEBOOK SRC LINK HERE:
+        
         video: "https://www.facebook.com/share/v/169YhwGzAaP/" 
     },
 
     { 
         title: "Barangay Fiesta", 
         thumbnail: "videos/thumb2.jpg", 
-        // PASTE THE FACEBOOK SRC LINK HERE:
+        
         video: "https://www.facebook.com/share/v/1En1r7BL2X/" 
     },
 
     { 
         title: "Debut SDE", 
         thumbnail: "videos/thumb3.jpg", 
-        // PASTE THE FACEBOOK SRC LINK HERE:
+      
         video: "https://www.facebook.com/share/v/1EA1V2cv3v/" 
     }
 ];
 
-// 3. TEAM DATA
+// Team Data
 const members = [
     { name: "Prince Harvy", role: "Member", image: "team/harvy.jpg", crop: "50% 10%" },
     { name: "Jaren Trasporto", role: "Creative Director", image: "team/jaren.jpg" },
@@ -102,19 +97,15 @@ const members = [
     { name: "Noah Antonio", role: "Member", image: "team/noah.jpg" }
 ];
 
-// 4. TESTIMONIALS DATA
+// Reviews Data
 const testimonials = [
     { name: "Sarah & Mark", message: "J&J Multimedia captured our wedding perfectly. The cinematic video made us cry!" },
-    { name: "Emily D.", message: "Highly professional team. The drone shots for our company festival were breathtaking." },
+    { name: "Adronica", message: "Ayyy perfect!" },
     { name: "David R.", message: "They made my daughter's 18th birthday look like a movie. Highly recommended." }
 ];
 
+// ------------------------------------------------------
 
-/* =========================================================
-   FUNCTIONALITY & LOGIC
-   ========================================================= */
-
-// --- 1. Sticky Navbar & Active Link Highlighting ---
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section, header');
@@ -143,7 +134,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// --- 2. Mobile Hamburger Menu ---
+// --------------------------------
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-links');
 
@@ -157,7 +148,7 @@ navLinks.forEach(link => {
     });
 });
 
-// --- 3. Gallery Generator & Filter (UPDATED FOR ALBUMS) ---
+// --------------------------------------------
 const galleryContainer = document.getElementById('gallery-container');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
@@ -167,7 +158,7 @@ function renderGallery(filterCategory = 'All') {
     gallery.forEach((item, index) => {
         if (filterCategory === 'All' || item.category === filterCategory) {
             
-            // 1. Check if the album has a custom crop, otherwise use 'center'
+            
             const imageCrop = item.crop || 'center'; 
 
             const htmlString = `
@@ -195,7 +186,6 @@ filterBtns.forEach(btn => {
 
 renderGallery();
 
-// --- 4. Video, Team, and Testimonials Generators ---
 
 const videoContainer = document.getElementById('video-container');
 videos.forEach(vid => {
@@ -211,7 +201,7 @@ videos.forEach(vid => {
 
 const teamContainer = document.getElementById('team-container');
 members.forEach(member => {
-    // Check if the member has a custom crop, if not, use 'center'
+
     const imageCrop = member.crop || 'center'; 
 
     const htmlString = `
@@ -235,14 +225,12 @@ testimonials.forEach(test => {
     testimonialContainer.innerHTML += htmlString;
 });
 
-// --- 5. Modal Logic (UPDATED LIGHTBOX FOR ALBUMS) ---
 
-// Variables to keep track of the currently opened album
 let currentAlbum = [];
 let currentIndex = 0;
 let currentAlbumTitle = "";
 
-// Lightbox Elements
+
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
@@ -251,7 +239,7 @@ const closeLightbox = document.getElementById('close-lightbox');
 const prevBtn = document.getElementById('prev-img');
 const nextBtn = document.getElementById('next-img');
 
-// Opens the album
+
 function openAlbum(albumIndex) {
     currentAlbum = gallery[albumIndex].images; 
     currentAlbumTitle = gallery[albumIndex].title;
@@ -261,7 +249,7 @@ function openAlbum(albumIndex) {
     lightbox.style.display = 'flex';
 }
 
-// Updates the image, text, and buttons
+
 function updateLightboxContent() {
     lightboxImg.src = currentAlbum[currentIndex];
     
@@ -285,7 +273,7 @@ function updateLightboxContent() {
     }
 }
 
-// Navigation Button Clicks
+
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
