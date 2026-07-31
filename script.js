@@ -55,8 +55,8 @@ const gallery = [
     { 
         title: "Kids Party", 
         category: "Birthday", 
-        coverImage: "gallery/photo6.jpg", 
-        images: ["gallery/photo6.jpg"] 
+        coverImage: "gallery/kids-cover.jpg", 
+        images: ["gallery/kid1.jpg"] 
     }
 ];
 
