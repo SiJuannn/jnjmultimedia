@@ -7,7 +7,11 @@ const gallery = [
         images: [ 
             "gallery/wedding1.jpg", 
             "gallery/wedding2.jpg", 
-            "gallery/wedding3.jpg"
+            "gallery/wedding3.jpg",
+            "gallery/wedding4.jpg", 
+            "gallery/wedding5.jpg", 
+            "gallery/wedding6.jpg", 
+            "gallery/wedding7.jpg",
         ]
     },
     { 
@@ -17,7 +21,12 @@ const gallery = [
         images: [ 
             "gallery/prewedding1.jpg", 
             "gallery/prewedding2.jpg", 
-            "gallery/prewedding3.jpg"
+            "gallery/prewedding3.jpg",
+            "gallery/prewedding4.jpg", 
+            "gallery/prewedding5.jpg", 
+            "gallery/prewedding6.jpg", 
+            "gallery/prewedding7.jpg",
+            "gallery/prewedding8.jpg"
         ]
     },
     { 
@@ -26,7 +35,10 @@ const gallery = [
         coverImage: "gallery/debut-cover.jpg",
         images: [
             "gallery/debut1.jpg",
-            "gallery/debut2.jpg"
+            "gallery/debut2.jpg",
+            "gallery/debut3.jpg",
+            "gallery/debut4.jpg",
+            "gallery/debut5.jpg"
         ]
     },
 // ---------------------------
@@ -44,19 +56,34 @@ const gallery = [
         title: "Pre-Debut", 
         category: "Prenup", 
         coverImage: "gallery/predebut-cover.jpg", 
-        images: ["gallery/predebut1.jpg"] 
+        images: ["gallery/pred1.jpg",
+            "gallery/pred2.jpg",
+            "gallery/pred3.jpg",
+            "gallery/pred4.jpg",
+            "gallery/pred5.jpg",
+        ] 
     },
     { 
         title: "Church Ceremony", 
         category: "Wedding", 
         coverImage: "gallery/photo5.jpg", 
-        images: ["gallery/photo5.jpg"] 
+        images: ["gallery/photo5.jpg",
+            "gallery/photo6.jpg",
+            "gallery/photo7.jpg",
+            "gallery/photo8.jpg",
+            "gallery/photo9.jpg"
+        ] 
     },
     { 
         title: "Kids Party", 
         category: "Birthday", 
         coverImage: "gallery/kids-cover.jpg", 
-        images: ["gallery/kid1.jpg"] 
+        images: ["gallery/kid1.jpg",
+            "gallery/kid2.jpg",
+            "gallery/kid3.jpg",
+            "gallery/kid4.jpg",
+            "gallery/kid5.jpg"
+        ] 
     }
 ];
 
@@ -92,9 +119,7 @@ const members = [
     { name: "Sofia Mendiola", role: "Member", image: "team/sofia.jpg" },
     { name: "Dean Lopez", role: "Member", image: "team/dean.jpg" },
     { name: "Phillen Grijaldo", role: "Member", image: "team/phillen.jpg" },
-    { name: "Juan Esteban", role: "Member", image: "team/juan.jpg" },
-    { name: "Jasper Fabian", role: "Member", image: "team/jasper.jpg" },
-    { name: "Noah Antonio", role: "Member", image: "team/noah.jpg" }
+    { name: "Juan Esteban", role: "Member", image: "team/juan.jpg" }
 ];
 
 // Reviews Data

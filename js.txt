@@ -5,7 +5,5 @@ const members = [
     { name: "Sofia Mendiola", role: "Member", image: "team/sofia.jpg" },
     { name: "Dean Lopez", role: "Member", image: "team/dean.jpg" },
     { name: "Phillen Grijaldo", role: "Member", image: "team/phillen.jpg" },
-    { name: "Juan Esteban", role: "Member", image: "team/juan.jpg" },
-    { name: "Jasper Fabian", role: "Member", image: "team/jasper.jpg" },
-    { name: "Noah Antonio", role: "Member", image: "team/noah.jpg" }
+    { name: "Juan Esteban", role: "Member", image: "team/juan.jpg" }
 ];
